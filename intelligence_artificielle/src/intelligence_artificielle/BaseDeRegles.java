@@ -26,6 +26,7 @@ public class BaseDeRegles {
 	
 	// Arguments : n Regles
 	public BaseDeRegles(Regle...ListeRegles) {
+		listeR = new ArrayList<Regle>();
 		for (Regle r : ListeRegles)
 			listeR.add(r);
 	}
@@ -54,7 +55,11 @@ public class BaseDeRegles {
 	
 	// TODO TO_STRING
 	public String toString() {
-		return "";
+		String listeDesRegles = "";
+		for (Regle f : listeR)
+			listeDesRegles += f + "\n";
+		listeDesRegles = listeDesRegles.substring(0, listeDesRegles.length());
+		return "BaseDeRegles[ \n" + listeDesRegles + "]";
 	}
 
 	// - GETTERS/SETTERS - 

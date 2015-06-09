@@ -7,7 +7,7 @@ public class Chercher
 	
 	
 
-	public static boolean Chercher(String Fait_Cherche) 
+	public static boolean main(String Fait_Cherche) 
 	{
 	  
 		int vrai=0;
@@ -42,7 +42,7 @@ public class Chercher
 		  			
 		            // Verifier si tous les conditions de la regle courant satisifient
 					
-					while((Chercher(Regle_Courante.getSi().get(i))==true)&&(i<Regle_Courante.getSi().size()))
+					while((Chercher.main(Regle_Courante.getSi().get(i))==true)&&(i<Regle_Courante.getSi().size()))
 						i++;
 					
 					//Si tous les conditions sont satisfies, alors on marque la regle et on reussi

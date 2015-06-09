@@ -10,7 +10,7 @@ public class Regle
 	private String alors;
 	private Boolean marque;
 	
-	// - - METHODES - -
+	// - - CONSTRUCTEURS - -
 	
 	// constructeur qui crée une règle vide
 	public Regle(){
@@ -54,7 +54,20 @@ public class Regle
 	}
 
 	
-	//getters / setters
+	// - - METHODES - -
+	
+	// TO_STRING
+	public String toString() {
+		String PartieSi = "";
+		String Et = " + ";
+		for (String f : si)
+			PartieSi += f + Et;
+		PartieSi = PartieSi.substring(0 , PartieSi.length() - Et.length() );
+		return "Regle[" + PartieSi + " => " + alors + "]" ;
+	}
+	
+	// - GETTERS/SETTERS -
+	
 	public ArrayList<String> getSi() {
 		return si;
 	}

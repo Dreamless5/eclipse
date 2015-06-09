@@ -26,6 +26,7 @@ public class BaseDeFaits {
 	
 	// Arguments : n Faits
 	public BaseDeFaits(String...ListeFaits) {
+		listeF = new ArrayList<String>();
 		for (String f : ListeFaits)
 			listeF.add(f);
 	}
@@ -54,7 +55,12 @@ public class BaseDeFaits {
 	
 	// TODO TO_STRING
 	public String toString() {
-		return "";
+		String listeDesFaits = "";
+		String virgule =",";
+		for (String f : listeF)
+			listeDesFaits += f + virgule;
+		listeDesFaits = listeDesFaits.substring(0, listeDesFaits.length() - virgule.length());
+		return "BaseDeFaits[" + listeDesFaits + "]";
 	}
 
 	// - GETTERS/SETTERS - 
