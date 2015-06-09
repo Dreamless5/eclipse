@@ -11,9 +11,9 @@ public class Chainage_avant
 	 */
 	
 	
-	public static void main(String[] args) 
+	public static void main() 
 	{
-		// TODO Auto-generated method stub
+		// TODO Ajouter print "chainage lance/termine"
 		
 		// On travaille sur les copies des bases courantes
 		BaseDeFaits F_Actuelle = new BaseDeFaits(BaseDeFaits.getBdF_courante());
@@ -40,8 +40,7 @@ public class Chainage_avant
 				if (!regle_courante.getMarque())
 				{
 					int c = 0;
-					while (listeDesFaits.contains( regle_courante.getSi().get(c) ) && 
-							c < regle_courante.getSi().size() )
+					while (c < regle_courante.getSi().size() && listeDesFaits.contains( regle_courante.getSi().get(c) ))   // l'ordre est effectivement important !
 						c++;
 					
 					if (c == regle_courante.getSi().size())
@@ -52,8 +51,8 @@ public class Chainage_avant
 		
 		}
 	
-		// TODO : il y a pas qc à faire ? bof
-		
+		// TODO : il y a pas qc à faire ? bof, print "fini" ?
+		System.out.println(F_Actuelle);
 		
 		
 		
