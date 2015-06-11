@@ -40,6 +40,7 @@ public class Chainage_avant
 				if (!regle_courante.getMarque())
 				{
 					int c = 0;
+					// OK. Redéfinir equals & hashCode pour les Regles ? NON. Et contains utilise equals pour comparer les String. OK RAS
 					while (c < regle_courante.getSi().size() && listeDesFaits.contains( regle_courante.getSi().get(c) ))   // l'ordre est effectivement important !
 						c++;
 					
