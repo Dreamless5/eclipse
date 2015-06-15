@@ -61,6 +61,15 @@ public class BaseDeRegles {
 		listeDesRegles = listeDesRegles.substring(0, listeDesRegles.length());
 		return "BaseDeRegles[ \n" + listeDesRegles + "]";
 	}
+	
+	//Afficher
+	
+	public void Afficher(){
+		for (Regle f : listeR)
+			System.out.println(f.toString());
+			
+	}
+
 
 	// - GETTERS/SETTERS - 
 	
