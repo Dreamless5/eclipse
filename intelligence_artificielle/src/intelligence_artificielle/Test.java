@@ -34,8 +34,10 @@ public class Test
 		System.out.println(B);
 		System.out.println(BDF);
 		
-// OK OK	
-	
+// OK OK
+		Regle LOL;
+		System.out.println("Test" + (LOL = new Regle(new ArrayList<String>(R11.getSi()) , new String(R11.getAlors()) ))  );
+		System.out.println(LOL);
 		
 		
 	}

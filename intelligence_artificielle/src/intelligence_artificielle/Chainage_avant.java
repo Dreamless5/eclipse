@@ -37,7 +37,7 @@ public class Chainage_avant
 			
 			for (Regle regle_courante : listeDesRegles)
 			{
-				if (!regle_courante.getMarque())
+				if (!regle_courante.getMarque())	//ce bloc peut être simplifié avec listeDesFaits.containsAll(regle_courante.getSi().get(c))
 				{
 					int c = 0;
 					// OK. Redéfinir equals & hashCode pour les Regles ? NON. Et contains utilise equals pour comparer les String. OK RAS
